@@ -16,6 +16,9 @@ public class SpringCloudConfiguration {
                 .route("mcommandesModule", r -> r.path("/commandes/**")
                         .uri("lb://mcommandes")  // Correct format for mcommandes service
                 )
+                .route("authModule", r -> r.path("/auth/**")
+                        .uri("lb://auth")  // Correct format for mcommandes service
+                )
                 .route("microserviceProduitsModule", r -> r.path("/products/**")
                         .uri("lb://microservice-produits")  // Correct format for microservice-produits service
                 )
